@@ -17,27 +17,30 @@ public class PemilihanPercobaan213 {
         float total = (uas * 0.4F) + (uts * 0.3F) + (kuis * 0.1F) + (tugas * 0.2F);
 
         if (total > 80 && total <= 100) {
-            System.out.println(message="A" );
+            message="Anda mendapatkan nilai A";
         } else if (total > 73 && total <= 80) {
-            System.out.println(message="Anda mendapatkan nilai B+" );
+            message="Anda mendapatkan nilai B+" ;
         } else if (total > 65 && total <= 73) {
-            System.out.println(message="Anda mendapatkan nilai B" );
+            message="Anda mendapatkan nilai B" ;
         } else if (total > 60 && total <= 65) {
-            System.out.println(message="Anda mendapatkan nilai C+" );
+            message="Anda mendapatkan nilai C+" ;
         } else if (total > 50 && total <= 60) {
-            System.out.println(message="Anda mendapatkan nilai C" );
+            message="Anda mendapatkan nilai C" ;
         } else if (total > 39 && total <= 50) {
-            System.out.println(message="Anda mendapatkan nilai D" );
+            message="Anda mendapatkan nilai D" ;
         } else if (total >= 0 && total <= 39) {
-            System.out.println(message="Anda mendapatkan nilai E" );
+            message="Anda mendapatkan nilai E" ;
         } else {
-            System.out.println(message="Nilai yang anda masukkan tidak valid" );
+            message="Nilai yang anda masukkan tidak valid" ;
         }
-
-
+        
         String hasil = total < 65 ? "Remidi" : "Tidak remidi";
 
-
-        System.out.println("Nilai akhir = " + total + " sehingga " + message + " Maka " + hasil);
+        
+        if (total >= 0 && total <= 100) {
+        System.out.println("Nilai akhir = " + total + " sehingga " + message + ", Maka " + hasil);
+        } else{
+        System.out.println("Inputan yang anda masukkan salah");
+        } 
     }
 }
