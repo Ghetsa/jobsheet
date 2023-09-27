@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-public class PemilihanPercobaan213 {
+public class PemilihanPercobaan212 {
     public static void main(String[] args) {
-        Scanner input13 = new Scanner(System.in);
+        Scanner input12 = new Scanner(System.in);
         String message;
 
         System.out.print("Nilai uas       : ");
-        float uas = input13.nextFloat();
+        float uas = input12.nextFloat();
         System.out.print("Nilai uts       : ");
-        float uts = input13.nextFloat();
+        float uts = input12.nextFloat();
         System.out.print("Nilai kuis      : ");
-        float tugas = input13.nextFloat();
+        float tugas = input12.nextFloat();
         System.out.print("Nilai tugas     : ");
-        float kuis = input13.nextFloat();
+        float kuis = input12.nextFloat();
 
         float total = (uas * 0.4F) + (uts * 0.3F) + (kuis * 0.1F) + (tugas * 0.2F);
 

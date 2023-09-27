@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 
-public class PemilihanPercobaan313 {
+public class PemilihanPercobaan312 {
     public static void main(String[] args) {
-        Scanner input13 = new Scanner(System.in);
+        Scanner input12 = new Scanner(System.in);
 
         double angka1, angka2, hasil;
         char operator;
 
         System.out.print("Masukkan angka pertama: ");
-        angka1 = input13.nextDouble();
+        angka1 = input12.nextDouble();
         System.out.print("Masukkan angka kedua: ");
-        angka2 = input13.nextDouble();
+        angka2 = input12.nextDouble();
         System.out.print("Masukkan operator (+ - * /): ");
-        operator = input13.next().charAt(0);
+        operator = input12.next().charAt(0);
 
 
         switch (operator) {
