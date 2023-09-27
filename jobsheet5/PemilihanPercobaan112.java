@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * PemilihanPercobaan113
+ * PemilihanPercobaan112
  */
 public class PemilihanPercobaan112 {
 
