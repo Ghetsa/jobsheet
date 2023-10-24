@@ -1,19 +1,37 @@
 package jobsheet9;
 
+import java.util.Scanner;
+
 public class LinearSearch12 {
     public static void main(String[] args) {
-        
-        int[] arrayInt = {34, 16, 26, 48, 72, 20, 56, 63};
-        int key = 20;
-        int hasil = 0;
+        Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; 1 < arrayInt.length;i++) {
+        System.out.print("Masukkan jumlah elemen array: ");
+        int jumlahElemen = sc.nextInt();
+        int[] arrayInt = new int[jumlahElemen];
+
+        for (int i = 0; i < jumlahElemen; i++) {
+            System.out.print("Masukkan elemen array ke-" + i + " : ");
+            arrayInt[i] = sc.nextInt();
+        }
+
+        System.out.print("Masukkan key yang ingin dicari: ");
+        int key = sc.nextInt();
+        int hasil = -1; 
+
+        for (int i = 0; i < jumlahElemen; i++) {
             if (arrayInt[i] == key) {
                 hasil = i;
                 break;
             }
         }
 
-        System.out.println("Key ada dalam array pada posisi index ke-"+hasil);
+        if (hasil != -1) {
+            System.out.println("Key ada di posisi indeks ke-" + hasil);
+        } else {
+            System.out.println("Key tidak ditemukan");
+        }
     }
 }
+
+
