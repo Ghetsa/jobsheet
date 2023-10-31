@@ -10,25 +10,57 @@ public class BioskopWithScanner12 {
         String[][] penonton = new String[4][2];
 
         while (true) {
-            System.out.print("Masukkan Nama: ");
-            nama = sc.nextLine();
-            
-            System.out.print("Masukkan Baris: ");
-            baris = sc.nextInt();
-            
-            System.out.print("Masukkan Kolom: ");
-            kolom = sc.nextInt();
-            
-            penonton[baris - 1][kolom - 1] = nama;
-            sc.nextLine();
+            System.out.println("-----------------------------");
+            System.out.println("Menu:");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.print("Pilih Menu: ");
 
-            System.out.print("Input penonton lainnya? (y/n): ");
-            next = sc.nextLine();
+            int menu = sc.nextInt();
+            sc.nextLine(); 
 
-            if (next.equalsIgnoreCase("n")) {
-                break;
+            switch (menu) {
+                case 1:
+                    System.out.print("Masukkan Nama: ");
+                    nama = sc.nextLine();
+
+                    System.out.print("Masukkan Baris: ");
+                    baris = sc.nextInt();
+
+                    System.out.print("Masukkan Kolom: ");
+                    kolom = sc.nextInt();
+
+                    if (penonton[baris - 1][kolom - 1] != null) {
+                        System.out.println("Maaf, kursi sudah terisi! Mohon pilih kursi lain.");
+                    } else {
+                        penonton[baris - 1][kolom - 1] = nama;
+                        sc.nextLine(); 
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("Daftar Penonton:");
+                    for (String[] barisPenonton : penonton) {
+                        for (String namaPenonton : barisPenonton) {
+                            if (namaPenonton == null) {
+                                System.out.print("****\t");
+                            } else {
+                                System.out.print(namaPenonton+"\t");
+                            }
+                        }
+                        System.out.println();
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("Thanks, Anda keluar dari program!");
+                    return;
+
+                default:
+                    System.out.println("Menu tidak valid.");
             }
-        }
 
+        }
     }
 }
